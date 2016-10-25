@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SMSExploratoryPrototype</string>
+    <string name="message_hint">Type your message here</string>
+    <string name="send">Send</string>
 </resources>
