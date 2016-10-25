@@ -3,6 +3,7 @@ package com.julianengel.smsexploratoryprototype;
 import android.app.Application;
 
 import com.parse.Parse;
+import com.parse.ParseObject;
 import com.parse.interceptors.ParseLogInterceptor;
 
 /**
@@ -14,6 +15,9 @@ public class ParseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        //Register custom parse module in Message.java
+        ParseObject.registerSubclass(Message.class);
 
         //Define our own server information for parse
         Parse.initialize(new Parse.Configuration.Builder(this)
